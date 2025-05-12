@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Accesorios MotoPower</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contenido {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .producto {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 250px;
+      padding: 15px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .producto img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .producto h3 {
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .producto p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .producto .precio {
+      color: #d9534f;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<script src="script.js" defer></script>
+<body>
+
+  <header>
+    
+    <h1>Accesorios MotoPower</h1>
+    <p>¡Todo lo que tu moto necesita en un solo lugar!</p>
+  </header>
+
+  <div class="contenido">
+  <h2>Haz tu pedido</h2>
+  <p>Completa el formulario y selecciona el asesor con el que deseas comunicarte por WhatsApp.</p>
+
+  <form id="formularioPedido" onsubmit="enviarPorWhatsApp(); return false;" style="max-width: 500px; margin: 0 auto; text-align: left; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <label for="nombre">Nombre completo:</label><br>
+    <input type="text" id="nombre" required style="width:100%; padding:10px; margin:8px 0;"><br>
+
+    <label for="telefono">Tu número de contacto:</label><br>
+    <input type="tel" id="telefono" required style="width:100%; padding:10px; margin:8px 0;"><br>
+
+    <label for="producto">Producto que deseas:</label><br>
+    <input type="text" id="producto" placeholder="Ej: Casco HJC" required style="width:100%; padding:10px; margin:8px 0;"><br>
+
+    <label for="mensaje">Mensaje adicional:</label><br>
+    <textarea id="mensaje" rows="4" placeholder="Detalles o dudas sobre el pedido..." style="width:100%; padding:10px; margin:8px 0;"></textarea><br>
+
+    <label for="numeroDestino">Selecciona un asesor:</label><br>
+    <select id="numeroDestino" required style="width:100%; padding:10px; margin:8px 0;">
+      <option value="573028549530|Santiago Rodriguez">Santiago Rodriguez - 302 854 9530</option>
+      <option value="573112267076|Leonel Serrano">Leonel Serrano - 311 226 7076</option>
+      <option value="573106347827|Jonnatan Cubillos">Jonnatan Cubillos - 310 634 7827</option>
+    </select><br>
+
+    <button type="submit" style="background-color:#25D366; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+      Enviar por WhatsApp
+    </button>
+  </form>
+
+</div>
+
+
+
+  <div class="contenido">
+    <h2>Productos destacados</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="imagenes/casco.jpg" alt="Casco">
+        <h3>Casco Deportivo</h3>
+        <p>Casco aerodinámico con protección certificada.</p>
+        <div class="precio">$350.000</div>
+      </div>
+
+      <div class="producto">
+        <img src="imagenes/guantes.jpg" alt="Guantes">
+        <h3>Guantes de Cuero</h3>
+        <p>Máxima comodidad y agarre para el manejo diario.</p>
+        <div class="precio">$40.000</div>
+      </div>
+
+      <div class="producto">
+        <img src="imagenes/impermeable.jpg" alt="Impermeable">
+        <h3>Impermeable 4 piezas</h3>
+        <p>Peotege tu ropa y tu salud.</p>
+        <div class="precio">$145.000</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
